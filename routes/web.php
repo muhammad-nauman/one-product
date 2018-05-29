@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
+Route::get('cart', 'HomeController@index')->name('cart.view');
+Route::get('checkout', 'HomeController@index')->name('checkout');

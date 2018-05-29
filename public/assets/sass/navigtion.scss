@@ -1,0 +1,86 @@
+@import 'variables';
+body{
+	header{
+		position: fixed;
+    	width: 100%;
+    	z-index: 99;
+    	background-color: rgba(255, 255, 255, 0.7);
+    	@media screen and (max-width: $mobile) {
+    		background-color: transparent;
+    	}
+    	.container{
+	    	@media screen and (max-width: $mobile) {
+	    		padding-left: 0px;
+	    		padding-right: 0px;
+	    	}    		
+    	}
+    	.navbar-header{
+    		@media screen and (max-width: $mobile) {
+    			background-color: $mobilenavbackground;
+    			padding: 0px 20px 10px 20px;
+    		}
+    	}
+    	.menu-toggle{
+    		display: none;
+    		@media screen and (max-width: $mobile) {
+    			display: block;
+    		}
+    	}
+    	.navbar-nav{
+    		@media screen and (max-width: $mobile) {
+    			margin-top: 0px;
+    			padding-top: 0px;
+    			background-color: $mobilenavbackground;
+    			display: none;
+    			li{
+    				padding: 0px 0px !important;
+    				a{
+    					padding-left: 41px;
+    					
+    				}
+    			}    			
+    		}
+
+    		}
+    	}
+
+	.custom-nav{
+		margin-bottom: 0px;
+		border: 0px solid;
+		.navbar-brand{
+			padding: 0px;
+			img{
+				max-width: 200px;
+				padding-top: 10px;
+			}
+		}
+		 nav{
+		 	background-color: transparent !important;
+		 	li{
+		 		&.nav-item{
+		 			padding: 0px 20px;
+		 			a{
+		 				color: $secondary-color !important;
+		 				padding-top: 25px;
+		 				padding-bottom: 25px;
+		 				@media screen and (max-width: $mobile) {
+		 					color: $mobilenavigationfontcolor !important;
+		 				}
+
+		 			}
+		 			&:hover, &:focus{
+		 				a{
+		 					color: $primary-color !important;
+		 				}
+		 			}
+		 		&.active{
+		 			a{
+		 				background-color: $primary-color !important;
+		 				color: #fff !important;
+		 			}
+		 		}
+		 		}
+		 	}
+		 }
+	}
+}
