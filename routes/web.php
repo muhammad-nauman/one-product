@@ -12,5 +12,5 @@
 */
 
 Route::get('/', 'HomeController@index');
-Route::get('cart', 'HomeController@index')->name('cart.view');
-Route::get('checkout', 'HomeController@index')->name('checkout');
+Route::get('cart', 'CartController@index')->name('cart.view');
+Route::get('checkout', 'CheckoutController@index')->name('checkout');
